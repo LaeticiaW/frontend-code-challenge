@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/list/ListContainer.vue</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/components/list</a> ListContainer.vue
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
+  &lt;div class="list-container"&gt;
+    &lt;!-- Header including tabs and toolbar --&gt;
+    &lt;header class="list-header"&gt;
+      &lt;list-tabs :active-tab="listState.activeTab" @tab-changed="tabChanged" /&gt;
+      &lt;list-toolbar
+        :search-text="listState.query.search"
+        :pokemon-type="listState.query.filter.type"
+        @search-changed="debounceSearchChanged"
+        @type-changed="typeChanged"
+        @display-mode-changed="displayModeChanged"
+      /&gt;
+    &lt;/header&gt;
+    &lt;!-- Content area for either the grid layout or the list layout --&gt;
+    &lt;section class="list-content"&gt;
+      &lt;grid-layout
+        v-if="listState.isGrid"
+        :pokemons="pokemons"
+        @details-displayed="saveListState"
+        @favorite-changed="favoriteChanged"
+      /&gt;
+      &lt;list-layout
+        v-if="listState.isList"
+        :pokemons="pokemons"
+        @details-displayed="saveListState"
+        @favorite-changed="favoriteChanged"
+      /&gt;
+    &lt;/section&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&nbsp;
+&lt;script&gt;
+<span class="cstat-no" title="statement not covered" >import ListTabs from "./ListTabs";</span>
+<span class="cstat-no" title="statement not covered" >import ListToolbar from "./ListToolbar";</span>
+<span class="cstat-no" title="statement not covered" >import GridLayout from "./GridLayout";</span>
+<span class="cstat-no" title="statement not covered" >import ListLayout from "./ListLayout";</span>
+<span class="cstat-no" title="statement not covered" >import _ from "lodash-core";</span>
+<span class="cstat-no" title="statement not covered" >import { DisplayModes, ListTabIds } from "@/enums";</span>
+<span class="cstat-no" title="statement not covered" >import { pokemonsQuery } from "@/graphql";</span>
+&nbsp;
+export default {
+  name: "ListContainer",
+&nbsp;
+  data() {
+<span class="cstat-no" title="statement not covered" >    return {</span>
+      listState: {
+        isGrid: true,
+        isList: false,
+        activeTab: 0,
+        query: {
+          limit: 1000,
+          offset: 0,
+          search: undefined,
+          filter: {
+            type: undefined,
+            isFavorite: false
+          }
+        }
+      },
+      pokemons: []
+    };
+  },
+&nbsp;
+  // Apollo query to retrieve all Pokemons
+  apollo: {
+    pokemons: {
+      query: pokemonsQuery,
+      variables() {
+<span class="cstat-no" title="statement not covered" >        return {</span>
+          search: this.listState.query.search,
+          type: this.listState.query.filter.type,
+          isFavorite: this.listState.query.filter.isFavorite
+        };
+      },
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >      update: data =&gt; data.pokemons.edges,</span></span>
+      fetchPolicy: "no-cache",
+      debounce: 200
+    }
+  },
+&nbsp;
+  components: {
+    ListTabs,
+    ListToolbar,
+    GridLayout,
+    ListLayout
+  },
+&nbsp;
+  methods: {
+    /*
+     * Updates the query search field as the user enters search text
+     */
+    searchChanged(search) {
+<span class="cstat-no" title="statement not covered" >      this.listState.query.search = search;</span>
+    },
+&nbsp;
+    /*
+     * Updates the query type field when the user chooses a Pokemon type
+     */
+    typeChanged(type) {
+<span class="cstat-no" title="statement not covered" >      this.listState.query.filter.type = type;</span>
+    },
+&nbsp;
+    /*
+     * Changes the display mode between grid and list when the user clicks on the
+     * grid and list icons
+     */
+    displayModeChanged(displayMode) {
+<span class="cstat-no" title="statement not covered" >      if (displayMode === DisplayModes.LIST) {</span>
+<span class="cstat-no" title="statement not covered" >        this.listState.isList = true;</span>
+<span class="cstat-no" title="statement not covered" >        this.listState.isGrid = false;</span>
+<span class="cstat-no" title="statement not covered" >      } else if (displayMode === DisplayModes.GRID) {</span>
+<span class="cstat-no" title="statement not covered" >        this.listState.isGrid = true;</span>
+<span class="cstat-no" title="statement not covered" >        this.listState.isList = false;</span>
+      } else {
+<span class="cstat-no" title="statement not covered" >        console.error("Invalid display mode change:", displayMode);</span>
+      }
+    },
+&nbsp;
+    /*
+     * Updates the query favorite field when the user changes between the All and Favorites tabs
+     */
+    tabChanged(tab) {
+<span class="cstat-no" title="statement not covered" >      this.listState.activeTab = tab;</span>
+<span class="cstat-no" title="statement not covered" >      if (tab === ListTabIds.ALL) {</span>
+<span class="cstat-no" title="statement not covered" >        this.listState.query.filter.isFavorite = false;</span>
+      } else {
+<span class="cstat-no" title="statement not covered" >        this.listState.query.filter.isFavorite = true;</span>
+      }
+    },
+&nbsp;
+    /*
+     * Refetch the Pokemons list when the user adds or removes a Pokemon from the favorites list
+     */
+    favoriteChanged() {
+<span class="cstat-no" title="statement not covered" >      if (this.listState.query.filter.isFavorite) {</span>
+<span class="cstat-no" title="statement not covered" >        this.$apollo.queries.pokemons.refetch();</span>
+      }
+    },
+&nbsp;
+    /*
+     * Save the query and display parameters to the Vuex store so that the list state can be
+     * restored when the user returns from the Details page
+     */
+    saveListState() {
+<span class="cstat-no" title="statement not covered" >      this.$store.commit("saveListState", this.listState);</span>
+    },
+&nbsp;
+    /*
+     * Restore the query and display parameters from the Vuex store
+     */
+    restoreListState() {
+<span class="cstat-no" title="statement not covered" >      this.listState = this.$store.getters.getListState;</span>
+    }
+  },
+&nbsp;
+  created() {
+    // Debounce the searchChanged method to prevent too many server calls as user types
+<span class="cstat-no" title="statement not covered" >    this.debounceSearchChanged = _.debounce(this.searchChanged, 250);</span>
+&nbsp;
+    // If got here via back button from the Details page, restore the query and display
+    // parameters, so the user sees the same data
+<span class="cstat-no" title="statement not covered" >    if (</span>
+      this.$router.options.routes.length &gt;= 2 &amp;&amp;
+      this.$router.options.routes[0].name === "ListContainer" &amp;&amp;
+      this.$router.options.routes[1].name === "DetailsContainer"
+    ) {
+<span class="cstat-no" title="statement not covered" >      this.restoreListState();</span>
+    }
+  }
+};
+&lt;/script&gt;
+&nbsp;
+&lt;style lang="scss" scoped&gt;
+@import "@/styles/variables.scss";
+&nbsp;
+.list-header {
+  position: fixed;
+  top: 0px;
+  width: calc(100% - 26px);
+  padding: 8px 0px 8px 0px;
+  box-shadow: 0px 4px 2px -2px $border-color;
+  // Prevent content bleeding through top of header on scroll
+  margin-top: -1px;
+  z-index: 5;
+  background-color: #ffffff;
+}
+.list-content {
+  margin-top: 96px;
+}
+&lt;/style&gt;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Nov 17 2020 17:46:43 GMT-0500 (Eastern Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

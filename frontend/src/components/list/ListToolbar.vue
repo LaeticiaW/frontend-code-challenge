@@ -32,10 +32,11 @@
     />
 
     <!-- List View and Grid View icons -->
-    <v-btn icon color="primary" @click="displayModeChanged(displayModes.LIST)" title="List View">
+    <v-btn icon color="primary" class="list-view" @click="displayModeChanged(displayModes.LIST)" title="List View">
       <v-icon>mdi-view-headline</v-icon>
     </v-btn>
-    <v-btn icon color="primary" @click="displayModeChanged(displayModes.GRID)" title="Grid View">
+
+    <v-btn icon color="primary" class="grid-view" @click="displayModeChanged(displayModes.GRID)" title="Grid View">
       <v-icon>mdi-view-module</v-icon>
     </v-btn>
   </div>

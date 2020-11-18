@@ -6,6 +6,7 @@
     :alt="pokemonAlt"
     :max-height="maxHeight"
     :max-width="maxWidth"
+    class="pokemon-image"
     @click="$emit('image-clicked')"
   />
 </template>

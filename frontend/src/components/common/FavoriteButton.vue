@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Favorite icon -->
-    <v-btn icon @click="toggleFavorite" :title="buttonTitle">
+    <v-btn icon @click="toggleFavorite" :title="buttonTitle" class="favorite-button">
       <v-icon color="red" class="favorite-icon" :class="{ favorite: pokemon.isFavorite }">{{ iconName }}</v-icon>
     </v-btn>
     <!-- Snack Msg -->

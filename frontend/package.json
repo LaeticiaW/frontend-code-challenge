@@ -97,7 +97,15 @@
     "watchPlugins": [
       "jest-watch-typeahead/filename",
       "jest-watch-typeahead/testname"
-    ]
+    ],
+    "setupFiles": ["<rootDir>/tests/unit/setup"],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,vue}",
+      "!src/main.js",
+      "!src/plugins/vuetify.js"
+    ],
+    "coverageReporters": ["json", "text", "text-summary", "lcovonly", "clover"]
   },
   "gitHooks": {
     "pre-commit": "lint-staged"

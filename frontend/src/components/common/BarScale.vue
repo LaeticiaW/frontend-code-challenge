@@ -60,7 +60,7 @@ export default {
     }
   }
   .scale-value {
-    flex-basis: 100px;
+    flex-basis: 80px;
     font-size: 13px;
     font-weight: bold;
   }

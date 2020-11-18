@@ -26,8 +26,8 @@
 
         <!-- Bar scale -->
         <div class="scale-stats">
-          <bar-scale label="maxCP" color="#9f9fff" :max-value="3000" :scale-value="pokemon.maxCP" />
-          <bar-scale label="maxHP" color="#71c1a1" :max-value="3000" :scale-value="pokemon.maxHP" />
+          <bar-scale label="CP" color="#9f9fff" :max-value="3000" :scale-value="pokemon.maxCP" />
+          <bar-scale label="HP" color="#71c1a1" :max-value="3000" :scale-value="pokemon.maxHP" />
         </div>
 
         <!-- Height and weight -->
@@ -103,20 +103,21 @@ export default {
   margin-bottom: 12px;
   width: 492px;
 
+  .image {
+    position: relative;
+    padding: 8px;
+    height: 290px;
+
+    .audio {
+      position: absolute;
+      top: 230px;
+      left: 12px;
+    }
+  }
+
   .details {
     background-color: $secondary-color;
 
-    .image {
-      position: relative;
-      padding: 8px;
-      height: 290px;
-
-      .audio {
-        position: absolute;
-        top: 230px;
-        left: 12px;
-      }
-    }
     .basic-info {
       display: flex;
       justify-content: space-between;
