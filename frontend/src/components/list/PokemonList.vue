@@ -26,6 +26,8 @@
         @favorite-changed="favoriteChanged"
       />
     </section>
+    <!-- Snack Msg -->
+    <snack-msg ref="snack" :options="snackOptions" />
   </div>
 </template>
 
@@ -37,6 +39,7 @@ import ListLayout from "./ListLayout";
 import _ from "lodash-core";
 import { DisplayModes, ListTabIds } from "@/enums";
 import { pokemonsQuery } from "@/graphql";
+import SnackMsg from "@/components/common/SnackMsg";
 
 export default {
   name: "PokemonList",
@@ -57,7 +60,12 @@ export default {
           }
         }
       },
-      pokemons: []
+      pokemons: [],
+      snackOptions: {
+        show: null,
+        msg: null,
+        color: "error"
+      }
     };
   },
 
@@ -74,7 +82,11 @@ export default {
       },
       update: data => data.pokemons.edges,
       fetchPolicy: "no-cache",
-      debounce: 200
+      debounce: 200,
+      error(error) {
+        console.error("Error retrieving Pokemon list", error);
+        this.$refs.snack.show("Unable to retrieve the list of Pokemons");
+      }
     }
   },
 
@@ -82,7 +94,8 @@ export default {
     ListTabs,
     ListToolbar,
     GridLayout,
-    ListLayout
+    ListLayout,
+    SnackMsg
   },
 
   methods: {
