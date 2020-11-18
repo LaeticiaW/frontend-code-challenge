@@ -1,7 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
-import DetailsContainer from "./components/details/DetailsContainer";
-import ListContainer from "./components/list/ListContainer";
+import PokemonDetails from "./components/details/PokemonDetails";
+import PokemonList from "./components/list/PokemonList";
 
 Vue.use(Router);
 
@@ -11,13 +11,13 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "ListContainer",
-      component: ListContainer
+      name: "PokemonList",
+      component: PokemonList
     },
     {
       path: "/:name",
-      name: "DetailsContainer",
-      component: DetailsContainer
+      name: "PokemonDetails",
+      component: PokemonDetails
     }
   ]
 });

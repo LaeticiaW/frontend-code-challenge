@@ -55,7 +55,7 @@ export default {
      */
     pokemonSelected() {
       this.$emit("details-displayed");
-      this.$router.push({ name: "DetailsContainer", params: { name: this.pokemon.name } });
+      this.$router.push({ name: "PokemonDetails", params: { name: this.pokemon.name } });
     },
 
     /*

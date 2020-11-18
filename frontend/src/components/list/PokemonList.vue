@@ -39,7 +39,7 @@ import { DisplayModes, ListTabIds } from "@/enums";
 import { pokemonsQuery } from "@/graphql";
 
 export default {
-  name: "ListContainer",
+  name: "PokemonList",
 
   data() {
     return {
@@ -161,8 +161,8 @@ export default {
     // parameters, so the user sees the same data
     if (
       this.$router.options.routes.length >= 2 &&
-      this.$router.options.routes[0].name === "ListContainer" &&
-      this.$router.options.routes[1].name === "DetailsContainer"
+      this.$router.options.routes[0].name === "PokemonList" &&
+      this.$router.options.routes[1].name === "PokemonDetails"
     ) {
       this.restoreListState();
     }

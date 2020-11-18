@@ -9,7 +9,7 @@ import Details2 from "./Details";
 import { pokemonByNameQuery } from "@/graphql";
 
 export default {
-  name: "DetailsContainer",
+  name: "PokemonDetails",
 
   data() {
     return {
