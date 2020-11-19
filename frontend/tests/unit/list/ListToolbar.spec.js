@@ -14,7 +14,14 @@ describe("ListToolbar.vue", () => {
     return mount(ListToolbar, {
       vuetify,
       localVue,
-      propsData: propsData || {}
+      propsData: propsData || {},
+      mocks: {
+        $store: {
+          state: {
+            pokemonTypes: ["Grass", "Poison", "Fire", "Flying", "Water", "Bug", "Normal"]
+          }
+        }
+      }
     });
   };
 
