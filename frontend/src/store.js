@@ -19,26 +19,21 @@ export default new Vuex.Store({
           isFavorite: false
         }
       },
-      tab: "",
-      scrollPosition: null
+      tab: ""
     },
-    listPokemons: []
+    pokemonTypes: []
   },
   getters: {
     getListState(state) {
       return _.cloneDeep(state.listState);
-    },
-    getListPokemons(state) {
-      return _.cloneDeep(state.listPokemons);
     }
   },
   mutations: {
     saveListState(state, listState) {
       state.listState = _.cloneDeep(listState);
     },
-    saveListPokemons(state, pokemons) {
-      state.pokemons = _.cloneDeep(pokemons);
+    savePokemonTypes(state, pokemonTypes) {
+      state.pokemonTypes = pokemonTypes;
     }
-  },
-  actions: {}
+  }
 });

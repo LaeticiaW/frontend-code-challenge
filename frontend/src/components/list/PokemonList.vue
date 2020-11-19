@@ -77,7 +77,9 @@ export default {
         return {
           search: this.listState.query.search,
           type: this.listState.query.filter.type,
-          isFavorite: this.listState.query.filter.isFavorite
+          isFavorite: this.listState.query.filter.isFavorite,
+          offset: this.listState.query.offset,
+          limit: this.listState.query.limit
         };
       },
       update: data => data.pokemons.edges,

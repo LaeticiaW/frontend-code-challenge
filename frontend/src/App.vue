@@ -11,10 +11,34 @@
 </template>
 
 <script>
+import { pokemonTypesQuery } from "@/graphql";
+
 export default {
   name: "App",
 
-  data: () => ({}),
+  data: () => ({
+    pokemonTypes: [],
+    skipQuery: false
+  }),
+
+  watch: {
+    // After pokemon types are retrieved, save them to the Vuex store and then skip the query
+    pokemonTypes(newTypes) {
+      this.$store.commit("savePokemonTypes", newTypes);
+      this.skipQuery = true;
+    }
+  },
+
+  // Apollo query to retrieve the Pokemon types. This query should just run once - the types will be
+  // saved in the Vuex store.
+  apollo: {
+    pokemonTypes: {
+      query: pokemonTypesQuery,
+      skip() {
+        return this.skipQuery;
+      }
+    }
+  },
 
   methods: {
     /*

@@ -9,8 +9,13 @@ export const pokemonTypesQuery = gql`
 
 // Retrieves the list of pokemons
 export const pokemonsQuery = gql`
-  query pokemons($search: String, $type: String, $isFavorite: Boolean) {
-    pokemons(query: { limit: 500, offset: 0, search: $search, filter: { type: $type, isFavorite: $isFavorite } }) {
+  query pokemons($limit: Int, $offset: Int, $search: String, $type: String, $isFavorite: Boolean) {
+    pokemons(
+      query: { limit: $limit, offset: $offset, search: $search, filter: { type: $type, isFavorite: $isFavorite } }
+    ) {
+      limit
+      offset
+      count
       edges {
         id
         name

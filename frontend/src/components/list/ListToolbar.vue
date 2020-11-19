@@ -17,7 +17,7 @@
     />
     <v-select
       v-model="type"
-      :items="pokemonTypes"
+      :items="$store.state.pokemonTypes"
       placeholder="Type"
       class="filter-item type rounded-0"
       background-color="secondary"
@@ -44,7 +44,6 @@
 
 <script>
 import { DisplayModes } from "@/enums";
-import { pokemonTypesQuery } from "@/graphql";
 
 export default {
   name: "ListToolbar",
@@ -69,28 +68,23 @@ export default {
     };
   },
 
-  // Apollo query to retrieve the Pokemon types
-  apollo: {
-    pokemonTypes: pokemonTypesQuery
-  },
-
   methods: {
     /*
-     * Propagate the search-changed event
+     * Emit the search-changed event
      */
     searchChanged(value) {
       this.$emit("search-changed", value);
     },
 
     /*
-     * Propagate the type-changed event
+     * Emit the type-changed event
      */
     typeChanged(value) {
       this.$emit("type-changed", value);
     },
 
     /*
-     * Propagate the display-mode-changed event
+     * Emit the display-mode-changed event
      */
     displayModeChanged(value) {
       this.$emit("display-mode-changed", value);

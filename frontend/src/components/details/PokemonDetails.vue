@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!$apollo.loading" class="details-container">
+  <div v-if="pokemon.name" class="details-container">
     <details2 :pokemon="pokemon" />
     <!-- Snack Msg -->
     <snack-msg ref="snack" :options="snackOptions" />
