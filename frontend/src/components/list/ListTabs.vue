@@ -12,10 +12,6 @@
       <v-tab :replace="true" ripple class="tab" @change="tabChanged(listTabIds.ALL)">All</v-tab>
       <v-tab :replace="true" ripple class="tab" @change="tabChanged(listTabIds.FAVORITES)">Favorites</v-tab>
     </v-tabs>
-
-    <section class="tab-content">
-      <router-view />
-    </section>
   </div>
 </template>
 

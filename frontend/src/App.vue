@@ -36,6 +36,9 @@ export default {
       query: pokemonTypesQuery,
       skip() {
         return this.skipQuery;
+      },
+      error(error) {
+        console.error("Error retrieving Pokemon types", error);
       }
     }
   },
